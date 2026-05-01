@@ -2,11 +2,11 @@
 
 ## Pasos para Despliegue Completo
 
-### 1. Crear Repositorio GitHub
+### 1. Crear Repositorio GitLab
 
 ```bash
-# Si ya tienes un repositorio en GitHub, añádelo como remoto:
-git remote add origin https://github.com/tu-usuario/multiplataforma-app.git
+# Si ya tienes un repositorio en GitLab, añádelo como remoto:
+git remote add origin https://gitlab.com/tu-usuario/multiplataforma-app.git
 
 # Sube el código
 git push -u origin master
@@ -15,9 +15,9 @@ git push -u origin master
 ### 2. Desplegar Backend en Railway
 
 1. **Crear cuenta en Railway**: [railway.app](https://railway.app)
-2. **Conectar GitHub**:
-   - Inicia sesión con GitHub
-   - Click "New Project" → "Deploy from GitHub repo"
+2. **Conectar GitLab**:
+   - Inicia sesión y selecciona "Connect GitLab"
+   - Click "New Project" → "Deploy from GitLab repo"
    - Selecciona este repositorio
 
 3. **Configurar el servicio**:
@@ -32,10 +32,10 @@ git push -u origin master
 ### 3. Desplegar Frontend en Vercel
 
 1. **Crear cuenta en Vercel**: [vercel.com](https://vercel.com)
-2. **Conectar GitHub**:
-   - Inicia sesión con GitHub
+2. **Conectar GitLab**:
+   - Inicia sesión y selecciona "Continue with GitLab"
    - Click "New Project"
-   - Selecciona este repositorio
+   - Selecciona este repositorio GitLab
 
 3. **Configurar el despliegue**:
    - **Framework Preset**: Other
@@ -51,8 +51,9 @@ git push -u origin master
 
 Ambas plataformas están configuradas para despliegue automático:
 
-- **Vercel**: Se despliega automáticamente en cada push a `main`
-- **Railway**: Se despliega automáticamente en cada push a `main`
+- **Vercel**: Se despliega automáticamente en cada push a `master`/`main`
+- **Railway**: Se despliega automáticamente en cada push a `master`/`main`
+- **GitLab CI**: Pipeline configurado para despliegue automático
 
 ### 5. Verificar Despliegue
 
@@ -89,13 +90,13 @@ Backend:  https://multiplataforma-backend.up.railway.app
 ✅ **Aplicación funcional**: Frontend y backend operativos  
 ✅ **URLs públicas**: Ambas aplicaciones accesibles online  
 ✅ **Múltiples plataformas**: Vercel + Railway  
-✅ **Repositorio GitHub**: Código versionado  
+✅ **Repositorio GitLab**: Código versionado  
 ✅ **CI/CD automático**: Despliegue en cada push  
 
 ## Arquitectura Final
 
 ```
-GitHub Repo
+GitLab Repo
     ↓ (CI/CD)
 ┌─────────────────┬─────────────────┐
 │   Vercel        │    Railway      │

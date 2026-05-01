@@ -6,7 +6,7 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 
 - **Frontend**: HTML/CSS/JavaScript vanilla desplegado en **Vercel**
 - **Backend**: Python/Flask API desplegado en **Railway**
-- **Repositorio**: GitHub con CI/CD automático
+- **Repositorio**: GitLab con CI/CD automático
 
 ## Estructura del Proyecto
 
@@ -32,13 +32,13 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 
 ## URLs de Despliegue
 
-### Frontend (Vercel)
-- URL: [Pendiente de despliegue]
-- Repositorio: Conectado a GitHub
+### Frontend
+- **Frontend**: URL: [Pendiente de despliegue]
+- **Repositorio**: Conectado a GitLab
 
 ### Backend (Railway)
 - URL: [Pendiente de despliegue]
-- Repositorio: Conectado a GitHub
+- Repositorio: Conectado a GitLab
 
 ## Configuración Local
 
@@ -79,7 +79,7 @@ Ambas plataformas están configuradas para despliegue automático:
 ✅ Aplicación funcional  
 ✅ Desplegada en internet (URLs públicas)  
 ✅ Múltiples plataformas (Vercel + Railway)  
-✅ Conectada a repositorio GitHub  
+✅ Conectada a repositorio GitLab  
 ✅ CI/CD automático configurado  
 
 ## Tecnologías Utilizadas
@@ -87,4 +87,4 @@ Ambas plataformas están configuradas para despliegue automático:
 - **Frontend**: HTML5, CSS3, JavaScript ES6+
 - **Backend**: Python, Flask, Flask-CORS
 - **Despliegue**: Vercel, Railway
-- **Control de Versiones**: Git/GitHub
+- **Control de Versiones**: Git/GitLab
