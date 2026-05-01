@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Demo - Multiplataforma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplicación Demo Multiplataforma</h1>
+            <p>Frontend en Vercel + Backend en Railway</p>
+        </header>
+        
+        <main>
+            <section class="user-section">
+                <h2>Gestión de Usuarios</h2>
+                <div class="form-container">
+                    <input type="text" id="nameInput" placeholder="Nombre">
+                    <input type="email" id="emailInput" placeholder="Email">
+                    <button onclick="addUser()">Agregar Usuario</button>
+                </div>
+                
+                <div class="users-list">
+                    <h3>Usuarios Registrados</h3>
+                    <div id="usersContainer"></div>
+                </div>
+            </section>
+            
+            <section class="api-section">
+                <h2>Estado del Backend</h2>
+                <button onclick="checkBackend()">Verificar Conexión</button>
+                <div id="backendStatus"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
