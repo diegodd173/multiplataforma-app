@@ -1,0 +1,13 @@
+# SI TU USUARIO GITHUB ES diego.diaz6
+
+# 1. Crear nuevo repositorio en GitHub con el nombre correcto
+# Ve a github.com/diego.diaz6 y crea "multiplataforma-app"
+
+# 2. Conectar al repositorio correcto
+git remote remove origin
+git remote add origin https://github.com/diego.diaz6/multiplataforma-app.git
+
+# 3. Subir código
+git push -u origin master
+
+# 4. Configurar Railway con el repositorio correcto

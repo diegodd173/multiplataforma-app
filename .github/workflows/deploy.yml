@@ -1,0 +1,82 @@
+name: Deploy Multiplatform App
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        cd backend
+        pip install -r requirements.txt
+    
+    - name: Test backend
+      run: |
+        cd backend
+        python -c "import app; print('Backend syntax OK')"
+
+  deploy-backend:
+    needs: test-backend
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    steps:
+    - name: Trigger Railway deployment
+      run: |
+        echo "Backend deployment triggered to Railway"
+        echo "Railway will auto-deploy from GitHub push"
+
+  deploy-frontend:
+    needs: test-backend
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    
+    - name: Install Vercel CLI
+      run: npm install --global vercel
+    
+    - name: Deploy frontend to Vercel
+      env:
+        VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      run: |
+        cd frontend
+        vercel --prod --token $VERCEL_TOKEN
+
+  health-check:
+    needs: [deploy-backend, deploy-frontend]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    steps:
+    - name: Wait for deployments
+      run: |
+        echo "Waiting for deployments to be ready..."
+        sleep 60
+    
+    - name: Check backend health
+      run: |
+        echo "Checking backend health..."
+        curl -f https://your-backend-url.up.railway.app/api/health || echo "Backend not ready yet"
+    
+    - name: Check frontend
+      run: |
+        echo "Checking frontend..."
+        curl -f https://your-frontend-url.vercel.app || echo "Frontend not ready yet"

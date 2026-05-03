@@ -1,0 +1,14 @@
+# COMANDOS PARA CONECTAR CON GITLAB
+# Reemplaza la URL con la de tu repositorio GitLab
+
+# 1. Conectar repositorio local con GitLab
+git remote add origin https://gitlab.com/TU-USUARIO/multiplataforma-app.git
+
+# 2. Verificar conexión
+git remote -v
+
+# 3. Subir código a GitLab
+git push -u origin master
+
+# 4. Verificar que se subió correctamente
+git status

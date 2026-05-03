@@ -5,8 +5,8 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 ## Arquitectura
 
 - **Frontend**: HTML/CSS/JavaScript vanilla desplegado en **Vercel**
-- **Backend**: Python/Flask API desplegado en **Railway**
-- **Repositorio**: GitLab con CI/CD automático
+- **Backend**: Supabase Database con API REST automática
+- **Repositorio**: GitHub con CI/CD automático
 
 ## Estructura del Proyecto
 
@@ -34,11 +34,11 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 
 ### Frontend
 - **Frontend**: URL: [Pendiente de despliegue]
-- **Repositorio**: Conectado a GitLab
+- **Repositorio**: Conectado a GitHub
 
-### Backend (Railway)
-- URL: [Pendiente de despliegue]
-- Repositorio: Conectado a GitLab
+### Backend (Supabase)
+- URL: [Pendiente de configuración]
+- Database: PostgreSQL con API REST
 
 ## Configuración Local
 
@@ -79,7 +79,7 @@ Ambas plataformas están configuradas para despliegue automático:
 ✅ Aplicación funcional  
 ✅ Desplegada en internet (URLs públicas)  
 ✅ Múltiples plataformas (Vercel + Railway)  
-✅ Conectada a repositorio GitLab  
+✅ Conectada a repositorio GitHub  
 ✅ CI/CD automático configurado  
 
 ## Tecnologías Utilizadas
@@ -87,4 +87,4 @@ Ambas plataformas están configuradas para despliegue automático:
 - **Frontend**: HTML5, CSS3, JavaScript ES6+
 - **Backend**: Python, Flask, Flask-CORS
 - **Despliegue**: Vercel, Railway
-- **Control de Versiones**: Git/GitLab
+- **Control de Versiones**: Git/GitHub

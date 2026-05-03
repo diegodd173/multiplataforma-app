@@ -1,0 +1,17 @@
+# COMANDOS PARA CONECTAR CON GITHUB
+# Reemplaza la URL con la de tu repositorio GitHub
+
+# 1. Remover conexión GitLab actual
+git remote remove origin
+
+# 2. Conectar repositorio local con GitHub
+git remote add origin https://github.com/TU-USUARIO/multiplataforma-app.git
+
+# 3. Verificar conexión
+git remote -v
+
+# 4. Subir código a GitHub
+git push -u origin master
+
+# 5. Verificar que se subió correctamente
+git status

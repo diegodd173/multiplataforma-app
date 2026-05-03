@@ -2,11 +2,11 @@
 
 ## Pasos para Despliegue Completo
 
-### 1. Crear Repositorio GitLab
+### 1. Crear Repositorio GitHub
 
 ```bash
-# Si ya tienes un repositorio en GitLab, añádelo como remoto:
-git remote add origin https://gitlab.com/tu-usuario/multiplataforma-app.git
+# Si ya tienes un repositorio en GitHub, añádelo como remoto:
+git remote add origin https://github.com/tu-usuario/multiplataforma-app.git
 
 # Sube el código
 git push -u origin master
@@ -15,9 +15,9 @@ git push -u origin master
 ### 2. Desplegar Backend en Railway
 
 1. **Crear cuenta en Railway**: [railway.app](https://railway.app)
-2. **Conectar GitLab**:
-   - Inicia sesión y selecciona "Connect GitLab"
-   - Click "New Project" → "Deploy from GitLab repo"
+2. **Conectar GitHub**:
+   - Inicia sesión con GitHub
+   - Click "New Project" → "Deploy from GitHub repo"
    - Selecciona este repositorio
 
 3. **Configurar el servicio**:
@@ -32,10 +32,10 @@ git push -u origin master
 ### 3. Desplegar Frontend en Vercel
 
 1. **Crear cuenta en Vercel**: [vercel.com](https://vercel.com)
-2. **Conectar GitLab**:
-   - Inicia sesión y selecciona "Continue with GitLab"
+2. **Conectar GitHub**:
+   - Inicia sesión con GitHub
    - Click "New Project"
-   - Selecciona este repositorio GitLab
+   - Selecciona este repositorio GitHub
 
 3. **Configurar el despliegue**:
    - **Framework Preset**: Other
@@ -53,7 +53,7 @@ Ambas plataformas están configuradas para despliegue automático:
 
 - **Vercel**: Se despliega automáticamente en cada push a `master`/`main`
 - **Railway**: Se despliega automáticamente en cada push a `master`/`main`
-- **GitLab CI**: Pipeline configurado para despliegue automático
+- **GitHub Actions**: Pipeline configurado para despliegue automático
 
 ### 5. Verificar Despliegue
 
@@ -90,13 +90,13 @@ Backend:  https://multiplataforma-backend.up.railway.app
 ✅ **Aplicación funcional**: Frontend y backend operativos  
 ✅ **URLs públicas**: Ambas aplicaciones accesibles online  
 ✅ **Múltiples plataformas**: Vercel + Railway  
-✅ **Repositorio GitLab**: Código versionado  
+✅ **Repositorio GitHub**: Código versionado  
 ✅ **CI/CD automático**: Despliegue en cada push  
 
 ## Arquitectura Final
 
 ```
-GitLab Repo
+GitHub Repo
     ↓ (CI/CD)
 ┌─────────────────┬─────────────────┐
 │   Vercel        │    Railway      │
