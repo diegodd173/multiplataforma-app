@@ -4,8 +4,8 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 
 ## Arquitectura
 
-- **Frontend**: HTML/CSS/JavaScript vanilla desplegado en **Vercel**
-- **Backend**: Supabase Database con API REST automática
+- **Frontend**: HTML/CSS/JavaScript vanilla desplegado en **Netlify**
+- **Backend**: Python/Flask API desplegado en **Render**
 - **Repositorio**: GitHub con CI/CD automático
 
 ## Estructura del Proyecto
@@ -36,9 +36,9 @@ Proyecto demostrativo de despliegue multiplataforma usando diferentes servicios 
 - **Frontend**: URL: [Pendiente de despliegue]
 - **Repositorio**: Conectado a GitHub
 
-### Backend (Supabase)
-- URL: [Pendiente de configuración]
-- Database: PostgreSQL con API REST
+### Backend (Render)
+- URL: [Pendiente de despliegue]
+- API: Python/Flask REST
 
 ## Configuración Local
 
