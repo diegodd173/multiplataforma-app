@@ -1,5 +1,5 @@
-// Backend URL - cambiará después del despliegue en Render
-const BACKEND_URL = 'https://your-backend-name.onrender.com';
+// Backend URL - URL de Render
+const BACKEND_URL = 'https://multiplataforma-app.onrender.com';
 
 // Usuarios almacenados localmente
 let users = JSON.parse(localStorage.getItem('users')) || [];
