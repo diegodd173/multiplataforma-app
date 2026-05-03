@@ -1,0 +1,23 @@
+services:
+  # Tipo de servicio
+  type: web
+  
+  # Nombre del servicio
+  name: multiplataforma-backend
+  
+  # Configuración del runtime
+  runtime: python
+  
+  # Directorio raíz (donde está requirements.txt)
+  rootDir: backend
+  
+  # Comando de construcción
+  buildCommand: pip install -r requirements.txt
+  
+  # Comando de inicio
+  startCommand: python app.py
+  
+  # Variables de entorno
+  envVars:
+    - key: PORT
+      value: 5000
