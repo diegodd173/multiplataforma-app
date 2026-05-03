@@ -4,7 +4,7 @@ import datetime
 import os
 
 app = Flask(__name__)
-CORS(app)  # Permitir peticiones del frontend
+CORS(app)
 
 # Base de datos en memoria (para demostración)
 users = []
@@ -14,7 +14,8 @@ def home():
     return jsonify({
         'message': 'Backend para App Demo Multiplataforma',
         'version': '1.0.0',
-        'platform': 'Railway'
+        'platform': 'Render',
+        'status': 'running'
     })
 
 @app.route('/api/health')
@@ -23,7 +24,8 @@ def health_check():
         'status': 'healthy',
         'timestamp': datetime.datetime.now().isoformat(),
         'service': 'backend-api',
-        'users_count': len(users)
+        'users_count': len(users),
+        'platform': 'Render'
     })
 
 @app.route('/api/users', methods=['GET'])
@@ -69,9 +71,10 @@ def get_stats():
         'total_users': len(users),
         'last_user': users[-1] if users else None,
         'server_time': datetime.datetime.now().isoformat(),
-        'environment': os.getenv('RAILWAY_ENVIRONMENT', 'development')
+        'environment': os.getenv('ENVIRONMENT', 'production'),
+        'platform': 'Render'
     })
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=False)
